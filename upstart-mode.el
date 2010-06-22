@@ -1,11 +1,10 @@
-;;; upstart-mode.el - Syntax highlighting for upstart
+;;; upstart-mode.el --- Syntax highlighting for upstart
 ;;;
 ;;; Copyright © 2010 Stig Sandbeck Mathisen <ssm@debian.org>
-;;; All rights reserved.
 
-;;; This program is free software: you can redistribute it and/or
+;;; This program is free software; you can redistribute it and/or
 ;;; modify it under the terms of the GNU General Public License as
-;;; published by the Free Software Foundation, either version 3 of the
+;;; published by the Free Software Foundation; either version 2 of the
 ;;; License, or (at your option) any later version.
 ;;;
 ;;; This program is distributed in the hope that it will be useful,
@@ -14,11 +13,15 @@
 ;;; General Public License for more details.
 ;;;
 ;;; You should have received a copy of the GNU General Public License
-;;; along with this program.  If not, see
-;;; <http://www.gnu.org/licenses/>.
+;;; along with this program; if not, write to the Free Software
+;;; Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+;;; 02110-1301, USA.
+
+;;; Commentary:
+;;
 
 ;;; Required: Copy this file to your load path, and add the following
-;;; statement to your emacs init file (typically ~/.emacs)
+;;; statement to your Emacs init file (typically ~/.emacs)
 ;;
 ;; (require 'upstart-mode)
 
@@ -38,6 +41,13 @@
 ;;     :end-not-begin t)))
 ;; (mmm-add-mode-ext-class 'upstart-mode nil 'upstart-sh)
 
+
+;;; History:
+;;
+;; This file is published on github.  To see a list of changes, see
+;; http://github.com/ssm/elisp/blob/master/upstart-mode.el
+
+;;; Code:
 
 ;; I just love standards, there are so many to choose from
 (if (string-match "XEmacs\\|Lucid" emacs-version)
@@ -74,3 +84,5 @@
   "A mode for upstart files")
 
 (provide 'upstart-mode)
+
+;;; upstart-mode.el ends here
