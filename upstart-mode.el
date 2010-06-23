@@ -49,11 +49,6 @@
 
 ;;; Code:
 
-;; I just love standards, there are so many to choose from
-(if (string-match "XEmacs\\|Lucid" emacs-version)
-    (require 'generic-mode)
-  (require 'generic))
-
 ;; Add a major mode called "upstart mode", based on generic-mode
 (define-generic-mode 'upstart-mode
   '("#")  ; comments
@@ -70,7 +65,7 @@
     "chdir" "limit"
     ;; Documentation
     "description" "author" "version" "emits"
-    ;; Miscellaneois
+    ;; Miscellaneous
     "kill timeout" "expect stop" "expect daemon" "expect fork"
     ;; Process definitions
     "exec" "script" "end script"
