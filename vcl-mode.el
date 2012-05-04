@@ -49,7 +49,7 @@
 
 (define-generic-mode 'vcl-mode
   ;; comments (defined in "vcl-mode-setup-function"
-  nil
+  '("#")
   ;; keywords (defined under "others" instead)
   nil
   ;; others
@@ -132,12 +132,13 @@
      "resp.proto"
      "resp.response"
      "resp.status"
+     "beresp.ttl"
      "server.ip"
      )
     'font-lock-variable-name-face)
 
    ;; More variables
-   '("\\(\\(be\\)?req\\|resp\\|obj\\)\.http\.[A-Za-z-]+" .
+   '("\\(bereq\\|beresp\\|req\\|resp\\|obj\\)\.http\.[A-Za-z-]+" .
      font-lock-variable-name-face))
   
   ;; Filenames to highlight
