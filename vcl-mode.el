@@ -1,9 +1,10 @@
-;;; vcl-mode.el - Syntax highlighting for Varnish Command Language
-;;; 
+;;; vcl-mode.el --- Syntax highlighting for Varnish Command Language
+;;;
 ;;; Copyright (c) 2008-2011 Redpill Linpro AS
 ;;; All rights reserved.
 ;;;
 ;;; Author: Stig Sandbeck Mathisen <ssm@redpill-linpro.com>
+;;; Version: 0.1
 ;;;
 ;;; Redistribution and use in source and binary forms, with or without
 ;;; modification, are permitted provided that the following conditions
@@ -244,3 +245,4 @@
     (eq (point) 1)))
 
 (provide 'vcl-mode)
+;;; vcl-mode.el ends here
