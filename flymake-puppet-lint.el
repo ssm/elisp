@@ -1,6 +1,8 @@
-;;; A flymake handler for puppet manifests
+;;; flymake-puppet-lint.el --- A minor mode to check puppet manifest
+;;; style guide conformity on the fly
 ;;;
 ;;; Author: Stig Sandbeck Mathisen <ssm@fnord.no>
+;;; Version: 0.1
 ;;;
 ;;; Homepage: http://fnord.no/
 ;;;
@@ -44,3 +46,4 @@
     (message "not emabling flymake: executable '%s' not found"
              flymake-puppet-lint-executable)))
 (provide 'flymake-puppet-lint)
+;;; flymake-puppet-lint.el ends here
