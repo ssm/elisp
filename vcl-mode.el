@@ -31,7 +31,8 @@
 ;;;
 
 (defgroup vcl nil
-  "Customizations for vcl-mode")
+  "Customizations for vcl-mode"
+  :group 'data)
 
 (defcustom vcl-indent-level 8
   "*The level of indentation (number of space characters) in VCL-mode."
@@ -48,6 +49,7 @@
 
 ;; Add a VCL major mode called "vcl-mode", based on generic-mode
 
+;;;###autoload
 (define-generic-mode 'vcl-mode
   ;; comments (defined in "vcl-mode-setup-function"
   '("#")
@@ -62,18 +64,20 @@
      "elsif"
      "if"
      "remove"
+     "return"
      "set"
      )
     'font-lock-keyword-face)
-   
+
    ;; Types
    (generic-make-keywords-list
     (list
      "purge_url"
      "regsub"
+     "regsuball"
      )
     'font-lock-builtin-face)
-   
+
    ;; VCL Functions
    (generic-make-keywords-list
     (list
@@ -92,7 +96,7 @@
      "vcl_timeout"
      )
     'font-lock-function-name-face)
-   
+
    ;; Actions
    (generic-make-keywords-list
     (list
@@ -141,7 +145,7 @@
    ;; More variables
    '("\\(bereq\\|beresp\\|req\\|resp\\|obj\\)\.http\.[A-Za-z-]+" .
      font-lock-variable-name-face))
-  
+
   ;; Filenames to highlight
   '("\\.vcl\\'")
   (list 'vcl-mode-setup-function)
@@ -163,9 +167,9 @@
   ;; Perl-style comments
   (modify-syntax-entry ?# "<")
   (modify-syntax-entry ?\n ">")
-  
+
   (run-hooks 'vcl-mode-hook)
-  (set (make-local-variable 'indent-line-function) 'vcl-indent-line)  
+  (set (make-local-variable 'indent-line-function) 'vcl-indent-line)
   (setq indent-tabs-mode vcl-indent-tabs-mode)
   )
 
@@ -176,7 +180,7 @@
   (interactive)
   (indent-line-to
    (max (vcl-calculate-indentation) 0)))
-  
+
 
 ;; The function to calculate indentation level.  This is a really
 ;; simple and naive function, and does not perform anything like a
