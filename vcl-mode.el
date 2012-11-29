@@ -49,6 +49,7 @@
 
 ;; Add a VCL major mode called "vcl-mode", based on generic-mode
 
+;;;###autoload
 (define-generic-mode 'vcl-mode
   ;; comments (defined in "vcl-mode-setup-function"
   '("#")
