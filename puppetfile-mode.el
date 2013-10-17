@@ -4,7 +4,7 @@
 ;;; All rights reserved.
 ;;;
 ;;; Author: Stig Sandbeck Mathisen <ssm@fnord.no>
-;;; Version: 0.1
+;;; Version: 0.2
 ;;;
 ;;; Redistribution and use in source and binary forms, with or without
 ;;; modification, are permitted provided that the following conditions
