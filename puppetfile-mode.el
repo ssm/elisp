@@ -52,12 +52,9 @@
 ;;;###autoload
 (define-generic-mode 'puppetfile-mode
   '("#")
-  nil
+  '("mod" "forge")
   (list
-   (generic-make-keywords-list
-    (list "mod" "forge")
-    'font-lock-function-name-face)
-   '(":[a-z]+" . font-lock-keyword-face)
+   '(":[a-z]+" . font-lock-variable-name-face)
    '("'[^']*'" . font-lock-string-face)
    )
   '("^Puppetfile$")
