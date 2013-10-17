@@ -54,8 +54,8 @@
   '("#")
   '("mod" "forge")
   (list
-   '(":[a-z]+" . font-lock-variable-name-face)
    '("'[^']*'" . font-lock-string-face)
+   '(":[a-z]+" . font-lock-variable-name-face)
    )
   '("^Puppetfile$")
   (list 'puppetfile-mode-setup-function)
